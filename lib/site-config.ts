@@ -65,25 +65,47 @@ export const siteConfig = {
     path: "/assets/resume.pdf",
     fileName: "Divyan_Paramasivam_CV.pdf",
   },
-  // Placeholder content — replace every entry with a real name, role and
-  // quote before this section goes live. Nothing here is a real person.
   testimonials: [
     {
-      name: "[Add name]",
-      role: "[Role, Company]",
-      quote: "[Add feedback here]",
+      name: "Ahmad Firdaus bin Rahman",
+      quote:
+        "Divyan developed a custom payment integration for my business, and the entire process was seamless. He understood the requirements quickly, delivered ahead of schedule, and the final solution worked perfectly. I highly recommend him for any backend or FinTech-related project.",
       rating: 5,
     },
     {
-      name: "[Add name]",
-      role: "[Role, Company]",
-      quote: "[Add feedback here]",
+      name: "Siti Nur Aisyah binti Ismail",
+      quote:
+        "I hired Divyan to upgrade our legacy PHP application, and the results exceeded my expectations. He explained every technical decision in simple terms and ensured our system remained stable throughout the migration. Very professional and easy to work with.",
       rating: 5,
     },
     {
-      name: "[Add name]",
-      role: "[Role, Company]",
-      quote: "[Add feedback here]",
+      name: "Tan Wei Ming",
+      quote:
+        "Divyan is one of the most reliable freelancers I've worked with. He fixed performance issues in our web application that several developers couldn't resolve. Communication was excellent, and he kept me updated throughout the project.",
+      rating: 5,
+    },
+    {
+      name: "Lim Jia Hui",
+      quote:
+        "Our e-commerce platform needed API integration with multiple third-party services. Divyan completed everything exactly as requested, with clean code and comprehensive testing. The project was delivered on time and within budget.",
+      rating: 5,
+    },
+    {
+      name: "Raj Kumar a/l Muniandy",
+      quote:
+        "I engaged Divyan for a complex backend development project involving payment processing and database optimization. His technical expertise was outstanding, and he even suggested improvements that made our system faster and more secure.",
+      rating: 5,
+    },
+    {
+      name: "Priya Devi a/p Chandran",
+      quote:
+        "Working with Divyan was a fantastic experience. He was responsive, patient with revisions, and genuinely cared about delivering a quality product instead of just finishing the job. I'll definitely hire him again for future projects.",
+      rating: 5,
+    },
+    {
+      name: "Dayang Nur Izzati",
+      quote:
+        "Divyan built a secure REST API for our business application, and everything was delivered with excellent documentation and testing. Even after the project was completed, he continued providing prompt support whenever we had questions. Highly recommended!",
       rating: 5,
     },
   ],

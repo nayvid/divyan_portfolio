@@ -13,7 +13,6 @@ export function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
       </p>
       <div className="mt-5 border-t border-border pt-3">
         <p className="text-sm font-semibold">{testimonial.name}</p>
-        <p className="text-xs text-fg-muted">{testimonial.role}</p>
       </div>
     </Card>
   );
