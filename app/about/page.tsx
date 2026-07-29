@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { Mountain, Tv, Plane, MapPin, Briefcase } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 import { SectionHeading } from "@/components/section-heading";
 import { StackGrid } from "@/components/stack-grid";
@@ -7,6 +8,8 @@ import { GithubContributions } from "@/components/github-contributions";
 import { Card } from "@/components/ui/card";
 import { Reveal } from "@/components/reveal";
 import { TiltCard } from "@/components/tilt-card";
+
+const activityIcons = { mountain: Mountain, tv: Tv, plane: Plane };
 
 export const metadata: Metadata = {
   title: "About",
@@ -21,25 +24,40 @@ export default function AboutPage() {
       <div className="grid gap-10 md:grid-cols-[1fr_auto] md:items-start">
         <Reveal>
           <Card className="p-6 sm:p-8">
+            <div className="mb-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-fg-muted">
+              <span className="inline-flex items-center gap-1.5">
+                <MapPin size={14} className="text-accent" />
+                {siteConfig.location}
+              </span>
+              <span className="inline-flex items-center gap-1.5">
+                <Briefcase size={14} className="text-accent" />
+                {siteConfig.role} at {siteConfig.employer}
+              </span>
+            </div>
+
             <p className="leading-relaxed text-fg-muted">
               {siteConfig.bio.quote}
               <br />
               <br />
               {siteConfig.bio.role}
-              <br />
-              <br />
-              Apart from developing projects, some other activities that I
-              love to do:
             </p>
-            <ul className="mt-4 space-y-2">
-              {siteConfig.bio.activities.map((activity) => (
-                <li
-                  key={activity}
-                  className="flex items-center gap-2 text-fg-muted"
-                >
-                  <span className="text-accent">›</span> {activity}
-                </li>
-              ))}
+
+            <p className="mt-6 text-sm font-semibold uppercase tracking-[0.2em] text-fg-muted">
+              Beyond the keyboard
+            </p>
+            <ul className="mt-3 space-y-2.5">
+              {siteConfig.bio.activities.map((activity) => {
+                const Icon = activityIcons[activity.icon];
+                return (
+                  <li
+                    key={activity.label}
+                    className="flex items-center gap-2.5 text-fg-muted"
+                  >
+                    <Icon size={16} className="shrink-0 text-accent" />
+                    {activity.label}
+                  </li>
+                );
+              })}
             </ul>
             <p className="mt-6 border-t border-border pt-4 text-accent-soft italic">
               &ldquo;{siteConfig.bio.motto}&rdquo;

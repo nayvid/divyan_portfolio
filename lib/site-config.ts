@@ -16,9 +16,13 @@ export const siteConfig = {
   bio: {
     intro:
       "I like solving problems. My proficiency is in using Java, JavaScript and Node.js. My fields of interest are building new technologies and products, and areas related to web development. Whenever possible, I also apply my passion for developing products with Node.js and modern JavaScript libraries and frameworks like React.js and Next.js. In my current role, I also work extensively with Laravel, PHP, Docker, and AWS (ECS, EC2) to build and deploy backend services and infrastructure.",
-    quote: "hi, I'm Divyan from Selangor, Malaysia.",
-    role: "I'm currently a Software Engineer / AI Engineer at Fiuu.",
-    activities: ["Hiking", "Watching Netflix shows", "Travelling"],
+    quote: "Hi, I'm Divyan — a software engineer based in Selangor, Malaysia.",
+    role: "I'm currently a Software Engineer / AI Engineer at Fiuu, where I build and ship backend services, developer tooling, and AI-driven features — from Java and Node.js APIs to Laravel/PHP applications, containerized with Docker and deployed on AWS.",
+    activities: [
+      { label: "Hiking", icon: "mountain" },
+      { label: "Watching Netflix shows", icon: "tv" },
+      { label: "Travelling", icon: "plane" },
+    ],
     motto: "The only way to do great work is to love what you do.",
   },
   social: {
