@@ -6,6 +6,8 @@ import { TiltCard } from "@/components/tilt-card";
 import { SocialLinks } from "@/components/social-links";
 import { Reveal } from "@/components/reveal";
 import { LinkButton } from "@/components/ui/button";
+import { SectionHeading } from "@/components/section-heading";
+import { TestimonialCard } from "@/components/testimonial-card";
 
 export default function Home() {
   return (
@@ -80,6 +82,19 @@ export default function Home() {
               />
             </TiltCard>
           </Reveal>
+        </div>
+      </section>
+
+      <section className="border-t border-border px-6 py-20">
+        <div className="mx-auto max-w-5xl">
+          <SectionHeading eyebrow="Testimonials" title="kind" accent="words" />
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {siteConfig.testimonials.map((testimonial, i) => (
+              <Reveal key={testimonial.name + i} delay={i * 0.08}>
+                <TestimonialCard testimonial={testimonial} />
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
     </div>

@@ -65,6 +65,29 @@ export const siteConfig = {
     path: "/assets/resume.pdf",
     fileName: "Divyan_Paramasivam_CV.pdf",
   },
+  // Placeholder content — replace every entry with a real name, role and
+  // quote before this section goes live. Nothing here is a real person.
+  testimonials: [
+    {
+      name: "[Add name]",
+      role: "[Role, Company]",
+      quote: "[Add feedback here]",
+      rating: 5,
+    },
+    {
+      name: "[Add name]",
+      role: "[Role, Company]",
+      quote: "[Add feedback here]",
+      rating: 5,
+    },
+    {
+      name: "[Add name]",
+      role: "[Role, Company]",
+      quote: "[Add feedback here]",
+      rating: 5,
+    },
+  ],
 } as const;
 
 export type Project = (typeof siteConfig.projects)[number];
+export type Testimonial = (typeof siteConfig.testimonials)[number];
