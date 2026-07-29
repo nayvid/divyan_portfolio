@@ -13,8 +13,12 @@ import {
   SiPostman,
   SiVercel,
   SiSpringboot,
+  SiPhp,
+  SiLaravel,
+  SiDocker,
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
+import { FaAws } from "react-icons/fa";
 import type { IconType } from "react-icons";
 import { Reveal } from "@/components/reveal";
 
@@ -27,6 +31,10 @@ const iconMap: Record<string, { icon: IconType; label: string }> = {
   mongodb: { icon: DiMongodb, label: "MongoDB" },
   java: { icon: DiJava, label: "Java" },
   git: { icon: DiGit, label: "Git" },
+  php: { icon: SiPhp, label: "PHP" },
+  laravel: { icon: SiLaravel, label: "Laravel" },
+  docker: { icon: SiDocker, label: "Docker" },
+  aws: { icon: FaAws, label: "AWS (ECS, EC2)" },
   windows: { icon: DiWindows, label: "Windows" },
   vscode: { icon: VscVscode, label: "VS Code" },
   postman: { icon: SiPostman, label: "Postman" },
