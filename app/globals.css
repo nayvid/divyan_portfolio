@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --color-bg: #faf8fc;
+  --color-bg-elevated: #ffffff;
+  --color-fg: #150f1e;
+  --color-fg-muted: #5b5468;
+  --color-border: rgba(21, 15, 30, 0.1);
+  --color-accent: #9333ea;
+  --color-accent-soft: #a855f7;
+  --color-accent-2: #ec4899;
+  --color-ring: rgba(147, 51, 234, 0.35);
+}
+
+.dark {
+  --color-bg: #08050d;
+  --color-bg-elevated: #120c1c;
+  --color-fg: #f4f1f8;
+  --color-fg-muted: #a79fb5;
+  --color-border: rgba(244, 241, 248, 0.1);
+  --color-accent: #c084fc;
+  --color-accent-soft: #d8b4fe;
+  --color-accent-2: #f472b6;
+  --color-ring: rgba(192, 132, 252, 0.4);
+}
+
+@theme inline {
+  --color-bg: var(--color-bg);
+  --color-bg-elevated: var(--color-bg-elevated);
+  --color-fg: var(--color-fg);
+  --color-fg-muted: var(--color-fg-muted);
+  --color-border: var(--color-border);
+  --color-accent: var(--color-accent);
+  --color-accent-soft: var(--color-accent-soft);
+  --color-accent-2: var(--color-accent-2);
+  --color-ring: var(--color-ring);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-space-grotesk);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-fg);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent-soft);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+.text-gradient {
+  background: linear-gradient(
+    120deg,
+    var(--color-accent) 0%,
+    var(--color-accent-2) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.wave {
+  animation: wave-animation 2.4s infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60%,
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .wave {
+    animation: none;
+  }
+}
