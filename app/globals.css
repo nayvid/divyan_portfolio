@@ -36,8 +36,10 @@
   --color-accent-soft: var(--color-accent-soft);
   --color-accent-2: var(--color-accent-2);
   --color-ring: var(--color-ring);
-  --font-sans: var(--font-lora);
-  --font-display: var(--font-lora);
+  --font-sans: "Iowan Old Style", "Palatino Linotype", "Book Antiqua",
+    Palatino, Georgia, serif;
+  --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua",
+    Palatino, Georgia, serif;
 }
 
 html {

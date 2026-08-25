@@ -60,6 +60,14 @@ export const siteConfig = {
       githubUrl: "https://github.com/nayvid/Admin-fulltsack-dashboard",
       demoUrl: "https://dashboard-cuyh.onrender.com",
     },
+    {
+      title: "Loan Payment Tracker",
+      description:
+        "A responsive loan-management dashboard with payment history, balance analytics, CSV exports, and real-time Supabase synchronization.",
+      image: "/assets/projects/loan-payment-tracker.png",
+      githubUrl: "https://github.com/nayvid/loan-tracker-system",
+      demoUrl: null,
+    },
   ],
   resume: {
     path: "/assets/resume.pdf",

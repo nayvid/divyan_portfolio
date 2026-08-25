@@ -1,17 +1,10 @@
 import type { Metadata } from "next";
-import { Lora } from "next/font/google";
 import { siteConfig } from "@/lib/site-config";
 import { ThemeProvider } from "@/components/theme-provider";
 import { NavBar } from "@/components/nav-bar";
 import { Footer } from "@/components/footer";
 import { ParticleBackground } from "@/components/particle-background";
 import "./globals.css";
-
-const lora = Lora({
-  variable: "--font-lora",
-  subsets: ["latin"],
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -40,11 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className={lora.variable}
-    >
+    <html lang="en" suppressHydrationWarning>
       <body className="flex min-h-screen flex-col font-sans antialiased">
         <ThemeProvider
           attribute="class"
